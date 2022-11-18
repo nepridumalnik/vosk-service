@@ -4,6 +4,10 @@ set(TARGET vosk_server)
 
 set(SOURCES
     main.cpp
+
+    impl/core_impl.cpp
+    impl/model_impl.cpp
+    impl/listener_impl.cpp
 )
 
 set(LIBRARIES
