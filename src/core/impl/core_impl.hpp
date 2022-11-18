@@ -10,10 +10,13 @@ namespace core
 class CoreImpl : public Core
 {
 public:
+    /// @see Core
     std::unique_ptr<Listener> GetListener(const std::string &modelName) override;
 
+    /// @see Core
     void AddModel(const std::string &path, const std::string &name) override;
 
+    /// @brief Деструктор
     ~CoreImpl() override = default;
 
 private:

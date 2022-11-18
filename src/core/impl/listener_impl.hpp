@@ -10,13 +10,18 @@ namespace core
 class ListenerImpl : public Listener
 {
 public:
+    /// @brief Конструктор
+    /// @param recognizer Распознаватель
     explicit ListenerImpl(RecognizerPtr recognizer);
 
-    std::string operator<<(const std::string &audio) override;
+    /// @see Listener
+    std::string Recognize(const std::string &audio) override;
 
+    /// @brief Деструктор
     ~ListenerImpl() = default;
 
 private:
+    /// @brief Распознаватель
     RecognizerPtr recognizer_;
 };
 

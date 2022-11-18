@@ -9,7 +9,7 @@ ListenerImpl::ListenerImpl(RecognizerPtr recognizer) : recognizer_{std::move(rec
 {
 }
 
-std::string ListenerImpl::operator<<(const std::string &audio)
+std::string ListenerImpl::Recognize(const std::string &audio)
 {
     auto res = vosk_recognizer_accept_waveform(recognizer_.get(), audio.c_str(), audio.size());
 
