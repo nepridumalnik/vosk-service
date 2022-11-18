@@ -21,6 +21,9 @@ struct Core
     /// @param [in] path Путь до файлов обученной модели
     /// @param [in] name Название модели
     virtual void AddModel(const std::string &path, const std::string &name) = 0;
+
+    /// @brief Деструктор
+    virtual ~Core() = default;
 };
 
 } // namespace core

@@ -1,8 +1,8 @@
 #include <vosk_api.h>
 
-#include <iostream>
-#include <fstream>
 #include <cstdio>
+#include <fstream>
+#include <iostream>
 #include <memory>
 
 // https://github.com/alphacep/vosk-api/blob/master/c/test_vosk.c
@@ -33,10 +33,9 @@ int main(int argc, char const *argv[])
 
     int res = vosk_recognizer_accept_waveform(recognizer.get(), buffer.c_str(), buffer.size());
     result += vosk_recognizer_final_result(recognizer.get());
-    vosk_recognizer_free(recognizer.get());
 
-    std::ofstream of2{"output.txt"};
-    of2 << result;
+    std::ofstream out{"output.txt"};
+    out << result;
 
     return 0;
 }
