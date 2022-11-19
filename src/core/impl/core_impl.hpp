@@ -1,5 +1,7 @@
 #include <interfaces/core.hpp>
 
+#include <types/macro.hpp>
+
 #include <unordered_map>
 
 namespace vosk_server
@@ -11,10 +13,10 @@ class CoreImpl : public Core
 {
 public:
     /// @see Core
-    std::unique_ptr<Listener> GetListener(const std::string &modelName) override;
+    VOSK_EXPORT std::unique_ptr<Listener> GetListener(const std::string &modelName) override;
 
     /// @see Core
-    void AddModel(const std::string &path, const std::string &name) override;
+    VOSK_EXPORT void AddModel(const std::string &path, const std::string &name) override;
 
     /// @brief Деструктор
     ~CoreImpl() override = default;
