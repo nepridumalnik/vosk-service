@@ -22,6 +22,10 @@ struct Core
     /// @param [in] name Название модели
     virtual void AddModel(const std::string &path, const std::string &name) = 0;
 
+    /// @brief Удалить языковую модель
+    /// @param [in] name Название модели
+    virtual void RemoveModel(const std::string &name) = 0;
+
     /// @brief Деструктор
     virtual ~Core() = default;
 };

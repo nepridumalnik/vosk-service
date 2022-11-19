@@ -18,6 +18,9 @@ public:
     /// @see Core
     VOSK_EXPORT void AddModel(const std::string &path, const std::string &name) override;
 
+    /// @see Core
+    VOSK_EXPORT void RemoveModel(const std::string &name) override;
+
     /// @brief Деструктор
     ~CoreImpl() override = default;
 
