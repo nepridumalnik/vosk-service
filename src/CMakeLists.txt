@@ -1,2 +1,2 @@
 add_subdirectory(example)
-add_subdirectory(core)
+add_subdirectory(vosk_wrapper)

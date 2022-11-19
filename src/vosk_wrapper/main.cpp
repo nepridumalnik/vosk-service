@@ -1,15 +1,15 @@
-#include <impl/core_impl.hpp>
+#include <vosk_wrapper/core/impl/core_impl.hpp>
 
 #include <fstream>
 
-static constexpr char ModelPath[] = "D:/Programming/C++/vosk-api/models/vosk-model-ru-0.22";
+static constexpr char ModelPath[] = "../../../vosk-api/models/vosk-model-ru-0.22";
 static constexpr char ModelName[] = "russian";
-static constexpr char Voice[] = "D:/Programming/C++/vosk-api/resources/novy_god.wav";
+static constexpr char Voice[] = "../../../vosk-api/resources/novy_god.wav";
 
 int main(int argc, char const *argv[])
 {
-    vosk_server::core::CoreImpl core;
-    core.AddModel(ModelPath, ModelName);
+    auto core = std::make_unique<vosk_wrapper::core::CoreImpl>();
+    core->AddModel(ModelPath, ModelName);
 
     std::string buffer;
     std::string result;
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
         in.close();
     }
 
-    auto listener = core.GetListener(ModelName);
+    auto listener = core->GetListener(ModelName);
     result = listener->Recognize(buffer);
 
     // Записать файл
@@ -32,6 +32,8 @@ int main(int argc, char const *argv[])
         std::ofstream out{"test_output.txt"};
         out << result;
     }
+
+    core->RemoveModel(ModelName);
 
     return 0;
 }

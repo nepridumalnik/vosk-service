@@ -1,11 +1,11 @@
 #pragma once
 
-#include <interfaces/model.hpp>
+#include <vosk_wrapper/core/interfaces/model.hpp>
 
 #include <memory>
 #include <string>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -31,4 +31,4 @@ struct Core
 };
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper

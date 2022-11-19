@@ -3,4 +3,6 @@ project(vosk)
 
 include(cmake/configure.cmake)
 
+include_directories(src)
+
 add_subdirectory(src)

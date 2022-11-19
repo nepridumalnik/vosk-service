@@ -1,10 +1,10 @@
 #pragma once
 
-#include <interfaces/listener.hpp>
+#include <vosk_wrapper/core/interfaces/listener.hpp>
 
 #include <memory>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -20,4 +20,4 @@ struct Model
 };
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper

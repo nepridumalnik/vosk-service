@@ -1,8 +1,8 @@
-#include <interfaces/model.hpp>
+#include <vosk_wrapper/core/interfaces/model.hpp>
 
-#include <types/data_types.hpp>
+#include <vosk_wrapper/core/types/data_types.hpp>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -26,4 +26,4 @@ private:
 };
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper

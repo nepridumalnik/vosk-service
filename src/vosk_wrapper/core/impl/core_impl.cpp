@@ -1,9 +1,9 @@
-#include <impl/core_impl.hpp>
-#include <impl/model_impl.hpp>
+#include <vosk_wrapper/core/impl/core_impl.hpp>
+#include <vosk_wrapper/core/impl/model_impl.hpp>
 
 #include <iostream>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -32,7 +32,7 @@ try
         }
     }
 
-    std::unique_ptr<Model> model = std::make_unique<ModelImpl>(path);
+    std::shared_ptr<Model> model = std::make_shared<ModelImpl>(path);
     models_.insert({name, std::move(model)});
 }
 catch (const std::exception &e)
@@ -53,4 +53,4 @@ void CoreImpl::RemoveModel(const std::string &name)
 }
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper

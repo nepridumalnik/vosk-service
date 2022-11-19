@@ -1,10 +1,10 @@
-#include <interfaces/core.hpp>
+#include <vosk_wrapper/core/interfaces/core.hpp>
 
-#include <types/macro.hpp>
+#include <vosk_wrapper/core/types/macro.hpp>
 
 #include <unordered_map>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -25,8 +25,8 @@ public:
     ~CoreImpl() override = default;
 
 private:
-    std::unordered_map<std::string, std::unique_ptr<Model>> models_;
+    std::unordered_map<std::string, std::shared_ptr<Model>> models_;
 };
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper

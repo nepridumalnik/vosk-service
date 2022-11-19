@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace vosk_server
+namespace vosk_wrapper
 {
 namespace core
 {
@@ -19,4 +19,4 @@ struct Listener
 };
 
 } // namespace core
-} // namespace vosk_server
+} // namespace vosk_wrapper
