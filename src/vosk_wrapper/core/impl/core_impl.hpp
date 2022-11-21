@@ -1,6 +1,6 @@
-#include <vosk_wrapper/core/interfaces/core.hpp>
+#include <vosk_wrapper/interfaces/core.hpp>
 
-#include <vosk_wrapper/core/types/macro.hpp>
+#include <types/macro.hpp>
 
 #include <unordered_map>
 

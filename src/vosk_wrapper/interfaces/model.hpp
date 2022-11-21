@@ -1,12 +1,10 @@
 #pragma once
 
-#include <vosk_wrapper/core/interfaces/listener.hpp>
+#include <vosk_wrapper/interfaces/listener.hpp>
 
 #include <memory>
 
 namespace vosk_wrapper
-{
-namespace core
 {
 
 struct Model
@@ -19,5 +17,4 @@ struct Model
     virtual ~Model() = default;
 };
 
-} // namespace core
 } // namespace vosk_wrapper

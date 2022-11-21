@@ -1,4 +1,4 @@
-#include <vosk_wrapper/core/interfaces/listener.hpp>
+#include <vosk_wrapper/interfaces/listener.hpp>
 
 #include <vosk_wrapper/core/types/data_types.hpp>
 

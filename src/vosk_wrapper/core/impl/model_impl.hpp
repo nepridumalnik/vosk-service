@@ -1,4 +1,4 @@
-#include <vosk_wrapper/core/interfaces/model.hpp>
+#include <vosk_wrapper/interfaces/model.hpp>
 
 #include <vosk_wrapper/core/types/data_types.hpp>
 

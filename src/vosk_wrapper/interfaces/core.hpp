@@ -1,13 +1,11 @@
 #pragma once
 
-#include <vosk_wrapper/core/interfaces/model.hpp>
+#include <vosk_wrapper/interfaces/model.hpp>
 
 #include <memory>
 #include <string>
 
 namespace vosk_wrapper
-{
-namespace core
 {
 
 struct Core
@@ -30,5 +28,4 @@ struct Core
     virtual ~Core() = default;
 };
 
-} // namespace core
 } // namespace vosk_wrapper

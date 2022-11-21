@@ -4,8 +4,6 @@
 
 namespace vosk_wrapper
 {
-namespace core
-{
 
 struct Listener
 {
@@ -18,5 +16,4 @@ struct Listener
     virtual ~Listener() = default;
 };
 
-} // namespace core
 } // namespace vosk_wrapper
