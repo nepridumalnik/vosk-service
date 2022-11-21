@@ -2,6 +2,7 @@
 
 #include <types/macro.hpp>
 
+#include <mutex>
 #include <unordered_map>
 
 namespace vosk_wrapper
@@ -25,7 +26,11 @@ public:
     ~CoreImpl() override = default;
 
 private:
+    /// @brief Неупорядоченный словарь с языковыми моделями
     std::unordered_map<std::string, std::shared_ptr<Model>> models_;
+
+    /// @brief Мьютекс
+    std::mutex mutex_;
 };
 
 } // namespace core

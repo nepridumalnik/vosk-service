@@ -10,6 +10,7 @@ namespace core
 
 std::unique_ptr<Listener> CoreImpl::GetListener(const std::string &modelName)
 {
+    std::lock_guard<std::mutex> lock{mutex_};
     auto model = models_.find(modelName);
 
     if (models_.end() == model)
@@ -23,6 +24,8 @@ std::unique_ptr<Listener> CoreImpl::GetListener(const std::string &modelName)
 void CoreImpl::AddModel(const std::string &path, const std::string &name)
 try
 {
+    std::lock_guard<std::mutex> lock{mutex_};
+
     {
         const auto model = models_.find(name);
 
@@ -42,6 +45,7 @@ catch (const std::exception &e)
 
 void CoreImpl::RemoveModel(const std::string &name)
 {
+    std::lock_guard<std::mutex> lock{mutex_};
     const auto model = models_.find(name);
 
     if (models_.end() == model)
