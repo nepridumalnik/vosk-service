@@ -7,4 +7,4 @@ set(SOURCES example.cpp)
 set(LIBRARIES ${VOSK})
 
 add_executable(${TARGET} ${SOURCES})
-target_link_libraries(${TARGET} ${LIBRARIES})
+target_link_libraries(${TARGET} PRIVATE ${LIBRARIES})

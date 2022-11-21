@@ -2,6 +2,8 @@
 
 #include <controllers/interfaces/server.hpp>
 
+#include <boost/asio.hpp>
+
 namespace controllers
 {
 
@@ -16,7 +18,11 @@ public:
 
     /// @brief see Server
     void Stop() override;
+
+private:
+    boost::asio::io_context context_;
 };
+;
 
 } // namespace server
 
