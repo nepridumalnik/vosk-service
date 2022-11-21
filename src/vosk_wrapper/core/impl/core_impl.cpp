@@ -57,4 +57,5 @@ void CoreImpl::RemoveModel(const std::string &name)
 }
 
 } // namespace core
+
 } // namespace vosk_wrapper

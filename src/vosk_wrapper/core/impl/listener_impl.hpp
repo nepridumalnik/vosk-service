@@ -29,4 +29,5 @@ private:
 };
 
 } // namespace core
+
 } // namespace vosk_wrapper

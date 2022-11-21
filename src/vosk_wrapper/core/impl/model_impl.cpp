@@ -27,4 +27,5 @@ std::unique_ptr<Listener> ModelImpl::GetRecognizer()
 }
 
 } // namespace core
+
 } // namespace vosk_wrapper
