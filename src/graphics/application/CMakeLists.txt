@@ -1,18 +1,14 @@
-add_subdirectory(core)
-
-set(TARGET vosk_test)
+set(TARGET application)
 
 set(SOURCES
     main.cpp
 )
 
 set(LIBRARIES
-    vosk_core
-    Qt5::Core
     Qt5::Widgets
+    gui
 )
 
-find_package(Qt5Core CONFIG REQUIRED)
 find_package(Qt5Widgets CONFIG REQUIRED)
 
 add_executable(${TARGET} ${SOURCES})

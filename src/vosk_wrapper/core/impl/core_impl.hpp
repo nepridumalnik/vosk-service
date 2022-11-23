@@ -14,13 +14,13 @@ class CoreImpl : public Core
 {
 public:
     /// @see Core
-    VOSK_EXPORT std::unique_ptr<Listener> GetListener(const std::string &modelName) override;
+    EXPORT std::unique_ptr<Listener> GetListener(const std::string &modelName) override;
 
     /// @see Core
-    VOSK_EXPORT void AddModel(const std::string &path, const std::string &name) override;
+    EXPORT void AddModel(const std::string &path, const std::string &name) override;
 
     /// @see Core
-    VOSK_EXPORT void RemoveModel(const std::string &name) override;
+    EXPORT void RemoveModel(const std::string &name) override;
 
     /// @brief Деструктор
     ~CoreImpl() override = default;
